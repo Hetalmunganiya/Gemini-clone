@@ -90,13 +90,41 @@
   }
 }
 
-/* Mobile & Tablet view */
+/* --- MOBILE SPECIFIC RULES --- */
 @media (max-width: 600px) {
+  /* Jab sidebar band ho: background transparent aur baaki icons hide */
   .sidebar {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 99;
-    height: 100vh;
+    min-height: auto;
+    background-color: transparent;
+    padding: 18px 12px;
+    z-index: 100;
+  }
+
+  .sidebar .new-chat,
+  .sidebar .bottom {
+    display: none;
+  }
+
+  /* Jab menu icon dabakar sidebar kholenge tabhi poora drawer aayega */
+  .sidebar.extended {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    min-height: 100vh;
+    background-color: #f0f4f9;
+    padding: 25px 15px;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .sidebar.extended .new-chat {
+    display: inline-flex;
+  }
+
+  .sidebar.extended .bottom {
+    display: flex;
   }
 }
