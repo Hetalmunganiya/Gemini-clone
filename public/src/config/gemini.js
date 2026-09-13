@@ -8,8 +8,7 @@ const MODEL_NAME = "gemini-3.6-flash";
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY; // ⚠️ Keep secret in backend for production
 
 async function runChat(prompt) {
-  // Step check: Check if API key is reaching the code
-  console.log("Check API Key:", API_KEY);
+  
 
   const genAI = new GoogleGenerativeAI(API_KEY);
   const model = genAI.getGenerativeModel({ model: MODEL_NAME });
